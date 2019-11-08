@@ -32,7 +32,7 @@ Author: <a href="http://www.os-templates.com/">OS Templates</a>
   <div id="header">
     <div id="logo" class="auto-style1">
       <h1 class="center"><a href="index.html">CURSOS 2019</a></h1>
-      <p class="center">Gratis?&nbsp; No!&nbsp; Con Anticipo.</p>
+      <p class="center">Gratis?&nbsp;&nbsp; No,&nbsp; con Anticipo!</p>
     </div>
     <div id="topnav"><%--ESTE ES EL MENU--%>
       <ul>
@@ -46,7 +46,7 @@ Author: <a href="http://www.os-templates.com/">OS Templates</a>
             <li><a href="#">Link 3</a></li>
           </ul>
         </li>
-          <li><a href="pages/full-width.html">Contacto</a></li>
+        <li class="last"><a href="#">Contacto</a></li>
         
       </ul>
     </div>
@@ -59,18 +59,16 @@ Author: <a href="http://www.os-templates.com/">OS Templates</a>
     <%-- ContentPlaceHolder, con esto se logra dejar ese espacio para agregar nueva funcionalidad con el nuevo formulario --%>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
-  
 </div>
 <!-- ####################################################################################################### -->
-
 <!-- PIE DE PAGINA ####################################################################################################### -->
 <div class="wrapper col5">
   <div id="copyright">
-    <p class="auto-style2">Programación Avanzada II - Grupo Nº 5 - Copyright &copy; 2019- <a href="#">UNLAM</a></p>
+    <p class="fl_centre">Programación Avanzada II - Grupo Nº 5 - Copyright &copy; 2019- <a href="#">UNLAM</a></p>
     <br class="clear" />
-    
   </div>
 </div>
-    </form>
+</form>
 </body>
 </html>
+

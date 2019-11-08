@@ -6,5 +6,5 @@
      ESTA SECCION ES PARA REGISTRAR ALUMNOS!
     <br/>
     <hr/>
-    <asp:Label ID="lblDatos" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="lblDatos" runat="server" Text=""></asp:Label>
 </asp:Content>
