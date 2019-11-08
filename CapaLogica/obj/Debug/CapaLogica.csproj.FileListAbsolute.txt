@@ -1,0 +1,5 @@
+d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\bin\Debug\CapaLogica.dll
+d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\bin\Debug\CapaLogica.pdb
+d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\obj\Debug\CapaLogica.dll
+d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\obj\Debug\CapaLogica.pdb

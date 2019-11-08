@@ -1,0 +1,5 @@
+d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\bin\Debug\CapaDatos.dll
+d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\bin\Debug\CapaDatos.pdb
+d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\obj\Debug\CapaDatos.dll
+d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\obj\Debug\CapaDatos.pdb
