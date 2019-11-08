@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TPModeloDeObjetos.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Alumno">
+          <Key>
+            <PropertyRef Name="ID_Alumno" />
+          </Key>
+          <Property Name="ID_Alumno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Apellido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha_Nacimiento" Type="date" />
+          <Property Name="DNI" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="AlumnoCurso">
+          <Key>
+            <PropertyRef Name="Id_Alumno" />
+            <PropertyRef Name="id_Curso" />
+          </Key>
+          <Property Name="Id_Alumno" Type="int" Nullable="false" />
+          <Property Name="id_Curso" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Asistencia">
+          <Key>
+            <PropertyRef Name="ID_Curso" />
+            <PropertyRef Name="ID_Alumno" />
+            <PropertyRef Name="Fecha" />
+          </Key>
+          <Property Name="ID_Curso" Type="int" Nullable="false" />
+          <Property Name="ID_Alumno" Type="int" Nullable="false" />
+          <Property Name="Asistencia" Type="bit" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Curso">
+          <Key>
+            <PropertyRef Name="ID_Curso" />
+          </Key>
+          <Property Name="Nombre_Curso" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID_Curso" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_AlumnoCurso_Alumno">
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="1" />
+          <End Role="AlumnoCurso" Type="Self.AlumnoCurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumno">
+              <PropertyRef Name="ID_Alumno" />
+            </Principal>
+            <Dependent Role="AlumnoCurso">
+              <PropertyRef Name="Id_Alumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlumnoCurso_Curso">
+          <End Role="Curso" Type="Self.Curso" Multiplicity="1" />
+          <End Role="AlumnoCurso" Type="Self.AlumnoCurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curso">
+              <PropertyRef Name="ID_Curso" />
+            </Principal>
+            <Dependent Role="AlumnoCurso">
+              <PropertyRef Name="id_Curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Asistencia_AlumnoCurso">
+          <End Role="AlumnoCurso" Type="Self.AlumnoCurso" Multiplicity="1" />
+          <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlumnoCurso">
+              <PropertyRef Name="Id_Alumno" />
+              <PropertyRef Name="id_Curso" />
+            </Principal>
+            <Dependent Role="Asistencia">
+              <PropertyRef Name="ID_Alumno" />
+              <PropertyRef Name="ID_Curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TPModeloDeObjetosStoreContainer">
+          <EntitySet Name="Alumno" EntityType="Self.Alumno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AlumnoCurso" EntityType="Self.AlumnoCurso" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Asistencia" EntityType="Self.Asistencia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Curso" EntityType="Self.Curso" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_AlumnoCurso_Alumno" Association="Self.FK_AlumnoCurso_Alumno">
+            <End Role="Alumno" EntitySet="Alumno" />
+            <End Role="AlumnoCurso" EntitySet="AlumnoCurso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlumnoCurso_Curso" Association="Self.FK_AlumnoCurso_Curso">
+            <End Role="Curso" EntitySet="Curso" />
+            <End Role="AlumnoCurso" EntitySet="AlumnoCurso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Asistencia_AlumnoCurso" Association="Self.FK_Asistencia_AlumnoCurso">
+            <End Role="AlumnoCurso" EntitySet="AlumnoCurso" />
+            <End Role="Asistencia" EntitySet="Asistencia" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TPModeloDeObjetos" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Alumno">
+          <Key>
+            <PropertyRef Name="ID_Alumno" />
+          </Key>
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ID_Alumno" Type="Int32" Nullable="false" />
+          <Property Name="Fecha_Nacimiento" Type="DateTime" Precision="0" />
+          <Property Name="DNI" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AlumnoCursoes" Relationship="Self.FK_AlumnoCurso_Alumno" FromRole="Alumno" ToRole="AlumnoCurso" />
+        </EntityType>
+        <EntityType Name="AlumnoCurso">
+          <Key>
+            <PropertyRef Name="Id_Alumno" />
+            <PropertyRef Name="id_Curso" />
+          </Key>
+          <Property Name="Id_Alumno" Type="Int32" Nullable="false" />
+          <Property Name="id_Curso" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Alumno" Relationship="Self.FK_AlumnoCurso_Alumno" FromRole="AlumnoCurso" ToRole="Alumno" />
+          <NavigationProperty Name="Curso" Relationship="Self.FK_AlumnoCurso_Curso" FromRole="AlumnoCurso" ToRole="Curso" />
+          <NavigationProperty Name="Asistencias" Relationship="Self.FK_Asistencia_AlumnoCurso" FromRole="AlumnoCurso" ToRole="Asistencia" />
+        </EntityType>
+        <EntityType Name="Asistencia">
+          <Key>
+            <PropertyRef Name="ID_Curso" />
+            <PropertyRef Name="ID_Alumno" />
+            <PropertyRef Name="Fecha" />
+          </Key>
+          <Property Name="ID_Curso" Type="Int32" Nullable="false" />
+          <Property Name="ID_Alumno" Type="Int32" Nullable="false" />
+          <Property Name="Asistencia1" Type="Boolean" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="AlumnoCurso" Relationship="Self.FK_Asistencia_AlumnoCurso" FromRole="Asistencia" ToRole="AlumnoCurso" />
+        </EntityType>
+        <EntityType Name="Curso">
+          <Key>
+            <PropertyRef Name="ID_Curso" />
+          </Key>
+          <Property Name="Nombre_Curso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_Curso" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AlumnoCursoes" Relationship="Self.FK_AlumnoCurso_Curso" FromRole="Curso" ToRole="AlumnoCurso" />
+        </EntityType>
+        <Association Name="FK_AlumnoCurso_Alumno">
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="1" />
+          <End Role="AlumnoCurso" Type="Self.AlumnoCurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumno">
+              <PropertyRef Name="ID_Alumno" />
+            </Principal>
+            <Dependent Role="AlumnoCurso">
+              <PropertyRef Name="Id_Alumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlumnoCurso_Curso">
+          <End Role="Curso" Type="Self.Curso" Multiplicity="1" />
+          <End Role="AlumnoCurso" Type="Self.AlumnoCurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Curso">
+              <PropertyRef Name="ID_Curso" />
+            </Principal>
+            <Dependent Role="AlumnoCurso">
+              <PropertyRef Name="id_Curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Asistencia_AlumnoCurso">
+          <End Role="AlumnoCurso" Type="Self.AlumnoCurso" Multiplicity="1" />
+          <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlumnoCurso">
+              <PropertyRef Name="Id_Alumno" />
+              <PropertyRef Name="id_Curso" />
+            </Principal>
+            <Dependent Role="Asistencia">
+              <PropertyRef Name="ID_Alumno" />
+              <PropertyRef Name="ID_Curso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BD_TPEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Alumnoes" EntityType="Self.Alumno" />
+          <EntitySet Name="AlumnoCursoes" EntityType="Self.AlumnoCurso" />
+          <EntitySet Name="Asistencias" EntityType="Self.Asistencia" />
+          <EntitySet Name="Cursoes" EntityType="Self.Curso" />
+          <AssociationSet Name="FK_AlumnoCurso_Alumno" Association="Self.FK_AlumnoCurso_Alumno">
+            <End Role="Alumno" EntitySet="Alumnoes" />
+            <End Role="AlumnoCurso" EntitySet="AlumnoCursoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlumnoCurso_Curso" Association="Self.FK_AlumnoCurso_Curso">
+            <End Role="Curso" EntitySet="Cursoes" />
+            <End Role="AlumnoCurso" EntitySet="AlumnoCursoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Asistencia_AlumnoCurso" Association="Self.FK_Asistencia_AlumnoCurso">
+            <End Role="AlumnoCurso" EntitySet="AlumnoCursoes" />
+            <End Role="Asistencia" EntitySet="Asistencias" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TPModeloDeObjetosStoreContainer" CdmEntityContainer="BD_TPEntities">
+          <EntitySetMapping Name="Alumnoes">
+            <EntityTypeMapping TypeName="TPModeloDeObjetos.Alumno">
+              <MappingFragment StoreEntitySet="Alumno">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="ID_Alumno" ColumnName="ID_Alumno" />
+                <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AlumnoCursoes">
+            <EntityTypeMapping TypeName="TPModeloDeObjetos.AlumnoCurso">
+              <MappingFragment StoreEntitySet="AlumnoCurso">
+                <ScalarProperty Name="Id_Alumno" ColumnName="Id_Alumno" />
+                <ScalarProperty Name="id_Curso" ColumnName="id_Curso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Asistencias">
+            <EntityTypeMapping TypeName="TPModeloDeObjetos.Asistencia">
+              <MappingFragment StoreEntitySet="Asistencia">
+                <ScalarProperty Name="ID_Curso" ColumnName="ID_Curso" />
+                <ScalarProperty Name="ID_Alumno" ColumnName="ID_Alumno" />
+                <ScalarProperty Name="Asistencia1" ColumnName="Asistencia" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cursoes">
+            <EntityTypeMapping TypeName="TPModeloDeObjetos.Curso">
+              <MappingFragment StoreEntitySet="Curso">
+                <ScalarProperty Name="Nombre_Curso" ColumnName="Nombre_Curso" />
+                <ScalarProperty Name="ID_Curso" ColumnName="ID_Curso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

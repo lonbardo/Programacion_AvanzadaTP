@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TPModeloDeObjetosStoreContainer" CdmEntityContainer="BD_TPEntities">
+    <EntitySetMapping Name="Alumnoes">
+      <EntityTypeMapping TypeName="TPModeloDeObjetos.Alumno">
+        <MappingFragment StoreEntitySet="Alumno">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="ID_Alumno" ColumnName="ID_Alumno" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlumnoCursoes">
+      <EntityTypeMapping TypeName="TPModeloDeObjetos.AlumnoCurso">
+        <MappingFragment StoreEntitySet="AlumnoCurso">
+          <ScalarProperty Name="Id_Alumno" ColumnName="Id_Alumno" />
+          <ScalarProperty Name="id_Curso" ColumnName="id_Curso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asistencias">
+      <EntityTypeMapping TypeName="TPModeloDeObjetos.Asistencia">
+        <MappingFragment StoreEntitySet="Asistencia">
+          <ScalarProperty Name="ID_Curso" ColumnName="ID_Curso" />
+          <ScalarProperty Name="ID_Alumno" ColumnName="ID_Alumno" />
+          <ScalarProperty Name="Asistencia1" ColumnName="Asistencia" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cursoes">
+      <EntityTypeMapping TypeName="TPModeloDeObjetos.Curso">
+        <MappingFragment StoreEntitySet="Curso">
+          <ScalarProperty Name="Nombre_Curso" ColumnName="Nombre_Curso" />
+          <ScalarProperty Name="ID_Curso" ColumnName="ID_Curso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

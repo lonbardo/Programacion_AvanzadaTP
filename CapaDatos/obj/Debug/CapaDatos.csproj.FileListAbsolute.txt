@@ -1,5 +1,8 @@
-d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\bin\Debug\CapaDatos.dll
-d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\bin\Debug\CapaDatos.pdb
-d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
-d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\obj\Debug\CapaDatos.dll
-d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\obj\Debug\CapaDatos.pdb
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\bin\Debug\CapaDatos.dll.config
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\bin\Debug\CapaDatos.dll
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\bin\Debug\CapaDatos.pdb
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\bin\Debug\EntityFramework.dll
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\bin\Debug\EntityFramework.xml
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\obj\Debug\CapaDatos.dll
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaDatos\obj\Debug\CapaDatos.pdb

@@ -1,5 +1,9 @@
-d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\bin\Debug\CapaLogica.dll
-d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\bin\Debug\CapaLogica.pdb
-d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
-d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\obj\Debug\CapaLogica.dll
-d:\documents\visual studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\obj\Debug\CapaLogica.pdb
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\bin\Debug\CapaLogica.dll
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\bin\Debug\CapaLogica.pdb
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\bin\Debug\CapaDatos.dll
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\bin\Debug\EntityFramework.dll
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\bin\Debug\CapaDatos.pdb
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\bin\Debug\EntityFramework.xml
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\obj\Debug\CapaLogica.dll
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaLogica\obj\Debug\CapaLogica.pdb

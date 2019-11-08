@@ -4,10 +4,9 @@
 <!--
 Template Name: PlusBusiness
 Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
 -->
+
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>CURSOS</title>
@@ -16,29 +15,39 @@ Licence URI: http://www.os-templates.com/template-terms
 <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
 <script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
 <script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 328px;
+        }
+        .auto-style2 {
+            float: left;
+            text-align: right;
+        }
+    </style>
 </head>
 <body id="top">
     <form id="form1" runat="server">
 <!-- ####################################################################################################### -->
 <div class="wrapper col1">
   <div id="header">
-    <div id="logo">
-      <h1><a href="index.html">CURSOS 2019</a></h1>
-      <p>Gratis, no como en la UNLAM</p>
+    <div id="logo" class="auto-style1">
+      <h1 class="center"><a href="index.html">CURSOS 2019</a></h1>
+      <p class="center">Gratis?&nbsp; No!&nbsp; Con Anticipo.</p>
     </div>
     <div id="topnav"><%--ESTE ES EL MENU--%>
       <ul>
         <li class="active"><a href="PaginaInicio.aspx">Inicio</a></li><%--AQUI SE PUSO LA PAGINA DE INICIO EN EL "HREF"--%>
         <li><a href="RegistrarAlumno.aspx">Regsitrar Alumno</a></li><%--EN ESTE APARTADO SE HACE REFERENCIA A NUESTRA PAGINA DE REGISTRO DE ALUMNOS--%>
-        <li><a href="pages/full-width.html">Cursos</a></li>
-        <li><a href="#">DropDown</a>
+        
+        <li><a href="#">Nuestros Cursos</a>
           <ul>
             <li><a href="#">Link 1</a></li>
             <li><a href="#">Link 2</a></li>
             <li><a href="#">Link 3</a></li>
           </ul>
         </li>
-        <li class="last"><a href="#">A Long Link Text</a></li>
+          <li><a href="pages/full-width.html">Contacto</a></li>
+        
       </ul>
     </div>
     <br class="clear" />
@@ -57,9 +66,9 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- PIE DE PAGINA ####################################################################################################### -->
 <div class="wrapper col5">
   <div id="copyright">
-    <p class="fl_left">Programación Avanzada II - Grupo Nº 5 Copyright &copy; 2019- <a href="#">UNLAM</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="auto-style2">Programación Avanzada II - Grupo Nº 5 - Copyright &copy; 2019- <a href="#">UNLAM</a></p>
     <br class="clear" />
+    
   </div>
 </div>
     </form>

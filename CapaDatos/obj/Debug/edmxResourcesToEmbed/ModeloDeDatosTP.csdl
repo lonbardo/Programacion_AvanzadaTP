@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TPModeloDeObjetos" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="ID_Alumno" />
+    </Key>
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID_Alumno" Type="Int32" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="DateTime" Precision="0" />
+    <Property Name="DNI" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AlumnoCursoes" Relationship="Self.FK_AlumnoCurso_Alumno" FromRole="Alumno" ToRole="AlumnoCurso" />
+  </EntityType>
+  <EntityType Name="AlumnoCurso">
+    <Key>
+      <PropertyRef Name="Id_Alumno" />
+      <PropertyRef Name="id_Curso" />
+    </Key>
+    <Property Name="Id_Alumno" Type="Int32" Nullable="false" />
+    <Property Name="id_Curso" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Alumno" Relationship="Self.FK_AlumnoCurso_Alumno" FromRole="AlumnoCurso" ToRole="Alumno" />
+    <NavigationProperty Name="Curso" Relationship="Self.FK_AlumnoCurso_Curso" FromRole="AlumnoCurso" ToRole="Curso" />
+    <NavigationProperty Name="Asistencias" Relationship="Self.FK_Asistencia_AlumnoCurso" FromRole="AlumnoCurso" ToRole="Asistencia" />
+  </EntityType>
+  <EntityType Name="Asistencia">
+    <Key>
+      <PropertyRef Name="ID_Curso" />
+      <PropertyRef Name="ID_Alumno" />
+      <PropertyRef Name="Fecha" />
+    </Key>
+    <Property Name="ID_Curso" Type="Int32" Nullable="false" />
+    <Property Name="ID_Alumno" Type="Int32" Nullable="false" />
+    <Property Name="Asistencia1" Type="Boolean" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="AlumnoCurso" Relationship="Self.FK_Asistencia_AlumnoCurso" FromRole="Asistencia" ToRole="AlumnoCurso" />
+  </EntityType>
+  <EntityType Name="Curso">
+    <Key>
+      <PropertyRef Name="ID_Curso" />
+    </Key>
+    <Property Name="Nombre_Curso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_Curso" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AlumnoCursoes" Relationship="Self.FK_AlumnoCurso_Curso" FromRole="Curso" ToRole="AlumnoCurso" />
+  </EntityType>
+  <Association Name="FK_AlumnoCurso_Alumno">
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="1" />
+    <End Role="AlumnoCurso" Type="Self.AlumnoCurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="ID_Alumno" />
+      </Principal>
+      <Dependent Role="AlumnoCurso">
+        <PropertyRef Name="Id_Alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlumnoCurso_Curso">
+    <End Role="Curso" Type="Self.Curso" Multiplicity="1" />
+    <End Role="AlumnoCurso" Type="Self.AlumnoCurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Curso">
+        <PropertyRef Name="ID_Curso" />
+      </Principal>
+      <Dependent Role="AlumnoCurso">
+        <PropertyRef Name="id_Curso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asistencia_AlumnoCurso">
+    <End Role="AlumnoCurso" Type="Self.AlumnoCurso" Multiplicity="1" />
+    <End Role="Asistencia" Type="Self.Asistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlumnoCurso">
+        <PropertyRef Name="Id_Alumno" />
+        <PropertyRef Name="id_Curso" />
+      </Principal>
+      <Dependent Role="Asistencia">
+        <PropertyRef Name="ID_Alumno" />
+        <PropertyRef Name="ID_Curso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_TPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alumnoes" EntityType="Self.Alumno" />
+    <EntitySet Name="AlumnoCursoes" EntityType="Self.AlumnoCurso" />
+    <EntitySet Name="Asistencias" EntityType="Self.Asistencia" />
+    <EntitySet Name="Cursoes" EntityType="Self.Curso" />
+    <AssociationSet Name="FK_AlumnoCurso_Alumno" Association="Self.FK_AlumnoCurso_Alumno">
+      <End Role="Alumno" EntitySet="Alumnoes" />
+      <End Role="AlumnoCurso" EntitySet="AlumnoCursoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlumnoCurso_Curso" Association="Self.FK_AlumnoCurso_Curso">
+      <End Role="Curso" EntitySet="Cursoes" />
+      <End Role="AlumnoCurso" EntitySet="AlumnoCursoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asistencia_AlumnoCurso" Association="Self.FK_Asistencia_AlumnoCurso">
+      <End Role="AlumnoCurso" EntitySet="AlumnoCursoes" />
+      <End Role="Asistencia" EntitySet="Asistencias" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
