@@ -23,6 +23,9 @@
     <NavigationProperty Name="Alumno" Relationship="Self.FK_AlumnoCurso_Alumno" FromRole="AlumnoCurso" ToRole="Alumno" />
     <NavigationProperty Name="Curso" Relationship="Self.FK_AlumnoCurso_Curso" FromRole="AlumnoCurso" ToRole="Curso" />
     <NavigationProperty Name="Asistencias" Relationship="Self.FK_Asistencia_AlumnoCurso" FromRole="AlumnoCurso" ToRole="Asistencia" />
+    <Property Name="Observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Profesor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="Asistencia">
     <Key>

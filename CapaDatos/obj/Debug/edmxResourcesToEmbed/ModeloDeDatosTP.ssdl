@@ -19,6 +19,9 @@
     </Key>
     <Property Name="Id_Alumno" Type="int" Nullable="false" />
     <Property Name="id_Curso" Type="int" Nullable="false" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="50" />
+    <Property Name="Profesor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fecha" Type="date" />
   </EntityType>
   <EntityType Name="Asistencia">
     <Key>

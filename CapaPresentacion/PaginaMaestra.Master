@@ -38,7 +38,7 @@ Author: <a href="http://www.os-templates.com/">OS Templates</a>
       <ul>
         <li class="active"><a href="PaginaInicio.aspx">Inicio</a></li><%--AQUI SE PUSO LA PAGINA DE INICIO EN EL "HREF"--%>
         <li><a href="RegistrarAlumno.aspx">Regsitrar Alumno</a></li><%--EN ESTE APARTADO SE HACE REFERENCIA A NUESTRA PAGINA DE REGISTRO DE ALUMNOS--%>
-        
+        <li><a href="Inscripcion.aspx">Inscripción</a></li>
         <li><a href="#">Nuestros Cursos</a>
           <ul>
             <li><a href="#">Link 1</a></li>
@@ -46,7 +46,7 @@ Author: <a href="http://www.os-templates.com/">OS Templates</a>
             <li><a href="#">Link 3</a></li>
           </ul>
         </li>
-        <li class="last"><a href="#">Contacto</a></li>
+        
         
       </ul>
     </div>

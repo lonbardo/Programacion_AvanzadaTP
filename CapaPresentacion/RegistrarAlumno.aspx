@@ -53,35 +53,27 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="lblTitulo" runat="server" Text="¿Posee un titulo?"></asp:Label>
-                </td>
+                &nbsp;</td>
             <td>
-                <asp:TextBox ID="txtTitulo" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>
-                <asp:Label ID="lblAnioFinalizacion" runat="server" Text="Año de finalización: "></asp:Label>
-                </td>
+                &nbsp;</td>
             <td>
-                <asp:TextBox ID="txtAnioFinalizacion" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:Label ID="lblCurso" runat="server" Text="Curso: "></asp:Label>
-                </td>
+                &nbsp;</td>
             <td>
-                <asp:TextBox ID="txtCurso" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:Label ID="lblFechaAlta" runat="server" Text="Fecha de alta: "></asp:Label>
-                </td>
+                &nbsp;</td>
             <td>
-                <asp:TextBox ID="txtFechaAlta" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -91,11 +83,12 @@
             <td class="right">
                 <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
             </td>
-            <td>&nbsp;</td>
+            <td>
+    <asp:Label ID="lblAlerta" runat="server" style="width: 64px; height: 16px; position: absolute; top: 364px; left: 215px" Visible="False"></asp:Label>
+            </td>
             <td>&nbsp;</td>
         </tr>
     </table>
-    <asp:Label ID="lblAlerta" runat="server" style="width: 64px; height: 16px; position: absolute; top: 380px; left: 520px" Visible="False"></asp:Label>
     <br />
     <br />
     

@@ -17,6 +17,9 @@
     <EntitySetMapping Name="AlumnoCursoes">
       <EntityTypeMapping TypeName="TPModeloDeObjetos.AlumnoCurso">
         <MappingFragment StoreEntitySet="AlumnoCurso">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="Id_Alumno" ColumnName="Id_Alumno" />
           <ScalarProperty Name="id_Curso" ColumnName="id_Curso" />
         </MappingFragment>

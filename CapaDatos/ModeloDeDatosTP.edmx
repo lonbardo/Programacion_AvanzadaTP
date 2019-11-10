@@ -24,6 +24,9 @@
           </Key>
           <Property Name="Id_Alumno" Type="int" Nullable="false" />
           <Property Name="id_Curso" Type="int" Nullable="false" />
+          <Property Name="Observaciones" Type="nvarchar" MaxLength="50" />
+          <Property Name="Profesor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fecha" Type="date" />
         </EntityType>
         <EntityType Name="Asistencia">
           <Key>
@@ -126,6 +129,9 @@
           <NavigationProperty Name="Alumno" Relationship="Self.FK_AlumnoCurso_Alumno" FromRole="AlumnoCurso" ToRole="Alumno" />
           <NavigationProperty Name="Curso" Relationship="Self.FK_AlumnoCurso_Curso" FromRole="AlumnoCurso" ToRole="Curso" />
           <NavigationProperty Name="Asistencias" Relationship="Self.FK_Asistencia_AlumnoCurso" FromRole="AlumnoCurso" ToRole="Asistencia" />
+          <Property Name="Observaciones" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Profesor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fecha" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Asistencia">
           <Key>
@@ -225,6 +231,9 @@
           <EntitySetMapping Name="AlumnoCursoes">
             <EntityTypeMapping TypeName="TPModeloDeObjetos.AlumnoCurso">
               <MappingFragment StoreEntitySet="AlumnoCurso">
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Profesor" ColumnName="Profesor" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
                 <ScalarProperty Name="Id_Alumno" ColumnName="Id_Alumno" />
                 <ScalarProperty Name="id_Curso" ColumnName="id_Curso" />
               </MappingFragment>

@@ -15,5 +15,6 @@ namespace CapaDatos
         public Nullable<System.DateTime> Fecha_Nacimiento { get; set; }
         public decimal DNI { get; set; }
         public string Email { get; set; }
+        
     }
 }
