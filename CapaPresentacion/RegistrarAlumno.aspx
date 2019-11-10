@@ -3,19 +3,19 @@
     <%-- EN EL VIDEO AGREGA UN TABLA HTML, PORQUE NO SE PUEDE AGERGAR UNA DE ASP? --%>
     
     <br/>
-     ESTA SECCION ES PARA REGISTRAR ALUMNOS!
+     (*) Campos obligatorios.
     <br />
     <br />
     <table style="width: 100%">
         <tr>
             <td>
-                <asp:Label ID="lblNombre" runat="server" Text="Nombre: "></asp:Label>
+                <asp:Label ID="lblNombre" runat="server" Text="Nombre: *"></asp:Label>
                 </td>
             <td>
                 <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:Label ID="lblApellido" runat="server" Text="Apellido: "></asp:Label>
+                <asp:Label ID="lblApellido" runat="server" Text="Apellido: *"></asp:Label>
                 </td>
             <td>
                 <asp:TextBox ID="txtApellido" runat="server"></asp:TextBox>
@@ -23,13 +23,13 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="lblDNI" runat="server" Text="DNI: "></asp:Label>
+                <asp:Label ID="lblDNI" runat="server" Text="DNI: *"></asp:Label>
                 </td>
             <td>
                 <asp:TextBox ID="txtDNI" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:Label ID="lblFechaNacimiento" runat="server" Text="Fecha de Nacimiento: "></asp:Label>
+                <asp:Label ID="lblFechaNacimiento" runat="server" Text="Fecha de Nacimiento: *"></asp:Label>
                 </td>
             <td>
                 <asp:TextBox ID="txtFechaNac" runat="server" CssClass="form-control"  type="date"></asp:TextBox>
@@ -39,13 +39,13 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="lblDireccion" runat="server" Text="Dirección: "></asp:Label>
+                <asp:Label ID="lblDireccion" runat="server" Text="Dirección: *"></asp:Label>
                 </td>
             <td>
                 <asp:TextBox ID="txtDireccion" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:Label ID="lblMail" runat="server" Text="Mail: "></asp:Label>
+                <asp:Label ID="lblMail" runat="server" Text="Mail: *"></asp:Label>
                 </td>
             <td>
                 <asp:TextBox ID="txtMail" runat="server"></asp:TextBox>
@@ -86,15 +86,19 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td class="right">
+                <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
     </table>
+    <asp:Label ID="lblAlerta" runat="server" style="width: 64px; height: 16px; position: absolute; top: 380px; left: 520px" Visible="False"></asp:Label>
     <br />
     <br />
-    <asp:Label ID="lblDatos" runat="server" Text=""></asp:Label>
+    
     <br />
     <br />
     <br/>

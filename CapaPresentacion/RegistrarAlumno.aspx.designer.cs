@@ -85,15 +85,6 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtFechaNac;
         
         /// <summary>
-        /// RequiredFieldValidator7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
-        
-        /// <summary>
         /// lblDireccion control.
         /// </summary>
         /// <remarks>
@@ -202,13 +193,22 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtFechaAlta;
         
         /// <summary>
-        /// lblDatos control.
+        /// btnGuardar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDatos;
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
+        
+        /// <summary>
+        /// lblAlerta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAlerta;
         
         /// <summary>
         /// btnMostrarRegitsros control.

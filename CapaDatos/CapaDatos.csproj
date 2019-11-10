@@ -60,6 +60,8 @@
     <Compile Include="Curso.cs">
       <DependentUpon>ModeloDeDatosTP.tt</DependentUpon>
     </Compile>
+    <Compile Include="DatosAlumno.cs" />
+    <Compile Include="EntidadAlumno.cs" />
     <Compile Include="ModeloDeDatosTP.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,7 +78,6 @@
       <DependentUpon>ModeloDeDatosTP.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AlumnoCapaDatos.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="ModeloDeDatosTP.edmx">
