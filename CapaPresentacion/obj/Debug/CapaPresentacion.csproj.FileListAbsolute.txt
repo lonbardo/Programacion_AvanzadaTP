@@ -1,3 +1,4 @@
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\roslyn\csc.exe
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -13,14 +14,11 @@ d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacio
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\CapaPresentacion.dll.config
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\CapaPresentacion.dll
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\CapaPresentacion.pdb
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\CapaDatos.dll
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\CapaLogica.dll
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\CapaDatos.pdb
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\CapaLogica.pdb
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\obj\Debug\CapaPresentacion.dll
 d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
-d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\CapaDatos.dll
-d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\EntityFramework.dll
-d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\CapaDatos.pdb
-d:\Documents\Visual Studio 2015\Projects\Programacion_AvanzadaTP\CapaPresentacion\bin\EntityFramework.xml
